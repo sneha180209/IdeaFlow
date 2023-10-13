@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Ideaflow</title>
+  </head>
+
+  <body class="bg-black">
+    <div class="cursor"></div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    
+    <nav class="bg-black" id="fixed-nav">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between my-2">
+          <div
+            class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+          ></div>
+          <div class="flex flex-shrink-0 items-left">
+            <img id="nav-logo"
+              class="h-8 w-auto"
+              src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5ef987561883fad47e90211c_Ideaflow%20white%201%403x.png"
+              alt="Your Company"
+            />
+          </div>
+
+          <div class="hidden sm:ml-6 sm:block ml-auto">
+            <div class="flex space-x-4">
+              <a
+                id="a1"
+                href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >Home</a
+              >
+              <a
+                id="a2"
+                href="#"
+                class="text-blue-500 hover:bg-gray-700 hover:text-blue-500 rounded-md px-3 py-2 text-sm font-medium"
+                >We're Hiring! JS, iOS +</a
+              >
+              <a
+                id="a3"
+                href="#"
+                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >Contacts</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="text-blue-300 hover:bg-gray-700 hover:text-blue-500 rounded-md px-3 py-2 text-sm font-medium"
+            >We're Hiring! JS, iOS +</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >Contacts</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="hero py-48">
+      <div class="container d-flex w-container">
+        <div class="image-container ml-6">
+          <img
+            src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efd71ad87946214f286c20b_blue%20face.png"
+            width="424"
+            sizes="(max-width: 479px) 91vw, (max-width: 767px) 424px, (max-width: 991px) 239.859375px, 366.3125px"
+            srcset="
+              https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efd71ad87946214f286c20b_blue%20face-p-800.png   800w,
+              https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efd71ad87946214f286c20b_blue%20face-p-1080.png 1080w,
+              https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efd71ad87946214f286c20b_blue%20face-p-1600.png 1600w,
+              https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efd71ad87946214f286c20b_blue%20face.png        1698w
+            "
+            alt=""
+            class="image"
+          />
+        </div>
+        <div class="div-block-2">
+          <h1 class="h1">The <span class="heading">Intelligence Amplification</span> Company</h1>
+          <p class="p1 py-12 text-2xl w-90">
+            We’re creating an ecosystem for humans and machines to work together
+            to solve the world’s most important problems – starting with a
+            notebook that augments your intelligence.
+          </p>
+          <a href="http://ideaflow.app" target="_blank" id="trybtn" class="button w-button"
+            >Try Ideaflow Notes</a
+          >
+          <a
+            href="https://apps.apple.com/us/app/ideaflow-notes/id6463830566"
+            target="_blank"
+            class="button joinus w-button"
+            > iOS</a
+          >
+          <a
+            href="https://onboarding.ideaflow.app/"
+            target="_blank"
+            class="button joinus w-button"
+            >Guide</a
+          >
+          <a
+            href="https://twitter.com/IdeaFlowGraphs"
+            target="_blank"
+            class="button joinus w-button"
+            >Twitter</a
+          >
+          <a
+            href="https://kaib430d7vl.typeform.com/to/cg7ZCvD9"
+            target="_blank"
+            class="button joinus w-button"
+            >Newsletter</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="middle">
+      <div class="centered-middle">
+        <h1 class="h2">Backed by world-class investors and partners</h1>
+        <div class="marquee">
+          <img src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efa8f47c6178fd2b29210de_first%20round.png" alt="..." />
+          <img src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efa8f47257981290f6013fd_8vc%20white.png" alt="..." />
+          <img src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efa8f473672ef81aad53378_startx.png" alt="..." />
+          <img class="bossanova" src="https://bossanovakptl.com.br/wp-content/uploads/2021/10/bossanova-branco.png" alt="..." />
+          <!-- <img class="more" src="https://33-img.s3.us-east-2.amazonaws.com/wtliu4xnbpeeyhvujdve-removebg-preview.png?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBcaCmFwLXNvdXRoLTEiRjBEAiBpJZDirWN1x3WGcRneASJJuHUtdogtax4ea%2FGknwnTUgIgDOQkCMkp2GTCWvuvC1QtJJTP4QbnC6ZVlALFsKxgRiUq5AIIMBAAGgw1ODU2MDg3OTgwOTgiDKHvIuIsPcKYBg64LCrBAkNLLHgJ4TFbjCq7XeO0OkJJMXNE%2BO8PD%2BMmom8UJorGv1B80wsmLB%2FKfCamYBXOm%2FaWcTWxBLu8n3OZrMrapChF30%2F%2F7F8M5bE5X27IcqtKEPFz2kQ3oErwVI90gJ3aCTNpkKDVQlMdVXS4oC4MMWgb7qBeHTsPVu2DbG9OIGOwgu8Drwmk3%2B5gm0t2zAXoUxUKcs4f6TliVeiiIdmptPkF3G%2BCwwZrr%2BZ8UulWX8TmojuExbbV3zY8D%2BDWPVmeN%2F2ljO4cgZ35pEZXc2aEzAsIgdWe902cBha2WXHmO26SIYU%2B6E72gq5TpD4r76QhtOT64lvXTFoUeH8HnsjousdTrgtdXeMBeDq5fTRYLRntt7kfDJ86i7R1lL5vyujaaZTZnaX%2B%2BeOJ3h%2FRXMaAs6qxMghdi5IaMfjjjQ%2FsMPGi1zDiqaWpBjq0AuKi0KQLNkB8FvYix8kwF28bnCp7o8qKIFtlo9qxtqTnIFZ070HSOJfobLh7zeeJlULgz48eZ6meFzT15TW%2FjyyXGNtYPaOgDzrsqabJ5nvB6cndRqhcI9uUCNy0uOb3Un7K8i1%2FPAy%2F%2BGmssCCxwYZ76DYcWBmVVoSRzaJWoajFJQy6upL6IWk0inK9Fb9k6M9CjPAmyZztfNqk3klxiXLiRB53HPtPA%2Bp9rZxaqKI8F4KOk%2FjKB8KKK1TQdCvyY6vHtnCQx03mOxv2Qeuij7RNOP2cTYmaX9wPXRyFnXxScgU9jVnHa54TIc8SEtyvXiq1iqV4upFh1ZFG7UByx8WVKpby2cJhBDTB777z1lpcaZor4Q5izy7S1XRlOX8oh26T8lu2NSMUsqVaaIfZpELe95G3&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20231013T145357Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAYQWIBD6JHSKMKFGJ%2F20231013%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Signature=b4a072784309957c3e6b3eca7eaf3d6e68183143030ae1bcec97aeaf18b59b2c" alt="..." /> -->
+          <h1>+33 more</h1>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="middle2">
+      <div class="middle2-tech">
+        <canvas class="particle-bg"></canvas>
+        <h2 class="h3">Connecting people with matching puzzle pieces</h2>
+        <p class="p3">
+          Connecting people with matching puzzle pieces There are millions of
+          scientists trying to cure the likes of AIDS and Alzheimer’s. Maybe the
+          cure is currently separated in different people’s heads. How can we
+          design the web so that these half-formed solutions can come together?
+          ‍<br />
+          - Sir Tim Berners-Lee, Creator of the Web
+        </p>
+      </div>
+    </div>
+
+    <div class="middle2">
+      <div class="middle2-tech">
+        <h2 class="h3">The auto-suggest layer for human thinking</h2>
+        <div class="para-button">
+          <p class="p3">
+            Connect fragments of information from siloed sources faster than
+            ever before. Your organization's collective memory at your
+            fingertips.
+          </p>
+          <a
+            href="https://docs.google.com/forms/d/1yhBzEkGB_nyDx9mVOQHsXvF3G1ovK4_SfAvh0TYAUds/edit"
+            target="_blank"
+            class="buttonlm w-button h-15"
+            >Learn more</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="middle-card">
+      <div class="centered-middle">
+          <div class="grid">
+              <div class="profile slide-left">
+                  <!-- <div class="home-profile"> -->
+                          <div class="circle"></div>
+                          <img src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efac0a9bd965c6f659d9afb_Avatar%20MW.png" class="image-6" />
+                          <div class="jd">
+                              <h4 class="name">Marty Weiner</h4>
+                              <h5 class="name">Former CTO,&nbsp;Reddit<br />Ideaflow Advisor</h5>
+                          </div>
+                          <br>
+                          <br>
+                          <p class="quote">
+                              “A key step to realizing the potential of the Web as a medium for collective intelligence.”
+                          </p>
+                  <!-- </div> -->
+              </div>
+  
+              <div class="profile slide-bottom">
+                  <!-- <div class="home-profile"> -->
+                          <div class="circle"></div>
+                          <img src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efbe6fc6697d411b88e0cc6_JD.png" class="image-6" />
+                          <div class="jd">
+                              <h4 class="name">John Devadoss</h4>
+                              <h5 class="name">Founding Director, Microsoft Digital Consulting</h5>
+                          </div>
+                          <br>
+                          <br>
+                          <p class="quote">
+                              “Ideaflow is the force multiplier for business productivity in this new normal.”
+                          </p>
+                  <!-- </div> -->
+                  
+              </div>
+  
+              <div class="profile slide-right">
+                  <!-- <div class="home-profile"> -->
+                          <div class="circle"></div>
+                          <img src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5efac266b0171beef967fcc0_Avatar-%20TD.png" class="image-6" />
+                          <div class="jd">
+                              <h4 class="name">Tim Draper</h4>
+                              <h5 class="name">Founder, DFJ<br />Ideaflow Investor</h5>
+                          </div>
+                          <br>
+                          <br>
+                          <p class="quote">
+                              “The amount of value that can be unlocked by connecting the right people and ideas together is incredible. I’m very excited for what Ideaflow is building”.
+                          </p>
+                      <!-- </div> -->
+              </div>
+          </div>
+      </div>
+  </div>
+  
+
+    <div class="hiring">
+      <div class="centered-middle hire">
+        <h2 class="h4">We're Hiring Key Roles</h2>
+        <p class="p4">Help us extend the human mind.</p>
+        <a href="/careers" id="hire" class="button-5 w-button">Join us or refer someone!</a>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="w-container">
+        <div class="footer-flex-container">
+          <a href="#" class="footer-logo-link w-inline-block"
+            ><img
+              src="https://uploads-ssl.webflow.com/5ef95ae22a251e0c9030800e/5ef987561883fad47e90211c_Ideaflow%20white%201%403x.png"
+              alt=""
+              class="footer-image"
+          /></a>
+          <div class="div-block-7">
+            <h2 class="footer-heading">#rabbithole</h2>
+            <ul role="list" class="w-list-unstyled">
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Memex"
+                  target="_blank"
+                  class="footer-link"
+                  >Memex</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://zettelkasten.de/introduction/"
+                  target="_blank"
+                  class="footer-link"
+                  >Niklas Luhmann's Zettelkasten</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Collective_intelligence"
+                  target="_blank"
+                  class="footer-link"
+                  >Collective IQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Intelligence_amplification"
+                  target="_blank"
+                  class="footer-link"
+                  >Intelligence amplification</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Giant_Global_Graph"
+                  target="_blank"
+                  class="footer-link"
+                  >Tim Berners-Lee’s Giant Global Graph</a
+                ><a
+                  href="https://en.wikipedia.org/wiki/Polymath_Project"
+                  target="_blank"
+                  class="footer-link"
+                  >Polymath Project</a
+                ><a
+                  href="http://math.mit.edu/~dspivak/CT4S.pdf"
+                  target="_blank"
+                  class="footer-link"
+                  >Category Theory for Scientists</a
+                ><a
+                  href="http://ideaflowplan.jacobcole.net/"
+                  target="_blank"
+                  class="footer-link"
+                  >ideaflowplan.jacobcole.net</a
+                ><a href="/privacy-policy" class="footer-link"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="div-block-6">
+            <h2 class="footer-heading">Latest updates</h2>
+            <a
+              href="https://medium.com/ideaflow"
+              target="_blank"
+              class="footer-link"
+              >Blog</a
+            >
+            <ul role="list" class="w-list-unstyled">
+              <li>
+                <a
+                  href="https://www.crunchbase.com/organization/ideaflow"
+                  target="_blank"
+                  class="footer-link"
+                  >Funding</a
+                ><a
+                  href="https://www.youtube.com/watch?v=4feZo9PqTlo"
+                  target="_blank"
+                  class="footer-link"
+                  >Bullet View Video</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-heading">Contact</h2>
+            <a href="mailto:pleascontact@ideaflow.io" class="footer-link"
+              >Email</a
+            >
+            <ul role="list" class="w-list-unstyled">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/ideaflow-inc/about/"
+                  target="_blank"
+                  class="footer-link"
+                  >Linkedin</a
+                ><a
+                  href="https://www.facebook.com/ideaflowgraphs/?ref=py_c"
+                  target="_blank"
+                  class="footer-link"
+                  >Facebook</a
+                ><a
+                  href="https://twitter.com/ideaflowgraphs"
+                  target="_blank"
+                  class="footer-link"
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>Copyright © 2020 Ideaflow, Inc. All rights reserved.</div>
+      </div>
+    </footer> 
+  </body>
+</html> 

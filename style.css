@@ -1,0 +1,750 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  height: 100%;
+  overflow-x: hidden;
+
+}
+
+html, body {
+  height: 100%;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+  margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+  margin-left: 25%;
+}
+
+.line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+@keyframes drop {
+  0% {
+      top: -50%;
+  }
+  100% {
+      top: 110%;
+  }
+}
+
+
+/* Hide the actual cursor */
+* {
+  cursor: none;
+}
+
+.cursor {
+  z-index: 1001;
+  position: fixed;
+  background: #2696E8;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: 0 0 20px #2696E8, 0 0 60px #2696E8, 0 0 100px #2696E8;
+  animation: colors 5s infinite;
+  /* transition: all 0.2s ease; Add a transition for smooth movement */
+  display: none;
+}
+
+
+@keyframes colors {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.cursor:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+a {
+  cursor: none !important; /* This will hide the cursor on all <a> tags */
+  /* pointer-events: none; */
+}
+
+#nav-logo{
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Define the fixed class for the navigation bar */
+#fixed-nav {
+  position: fixed;
+  /* padding-top: 10px; */
+  /* padding-bottom: 20px; */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+/* .auto-type{
+  color: #00c8ce;
+  letter-spacing: 3px;
+  animation: typing 3s steps(30) 1s 1 normal both,
+  blinkTextCursor 500ms steps(30) infinite normal;  
+} */
+
+.heading {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    color: #61f2f7;
+    text-shadow: 0 0 10px #00c8ce;
+  }
+  50% {
+    color: #00c8ce;
+    text-shadow: 0 0 20px #00c8ce, 0 0 10px #00c8ce;
+  }
+  100% {
+    color: #61f2f7;
+    text-shadow: 0 0 10px #00c8ce;
+  }
+}
+
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.6; 
+  filter: drop-shadow(2px 2px 6px #27acff);
+  z-index: 1;
+}
+
+.div-block-2 {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.h1 {
+  font-size: 58px;
+  line-height: 44px;
+  color: white !important;
+  font-weight: 400;
+}
+
+.p1 {
+  font-size: 20px;
+  line-height: 28px;
+  color: white !important;
+  font-weight: 400;
+}
+
+.button {
+  background-color: #00c8ce;
+  border-radius: 10px;
+  margin-left: 0;
+  font-family: Red Hat Display, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: box-shadow 0.3s; /* Add a transition for smooth hover effect */
+}
+
+#trybtn {
+  background-color: #00c8ce;
+  color: #dfdfdf;
+  box-shadow: 0 0 10px 2px rgba(0, 200, 206, 0.8); /* Add a glowing effect */
+  
+}
+
+#trybtn:hover{
+  transform: translate(0, -5px);
+}
+
+.button.joinus {
+  float: none;
+  color: #00c8ce;
+  background-color: #000;
+  margin-left: 20px;
+  padding-left: 0;
+  font-weight: 700;
+  position: static;
+}
+
+.w-button {
+  color: #fff;
+  line-height: inherit;
+  cursor: pointer;
+  background-color: #1d2b37;
+  border: 0;
+  border-radius: 10px;
+  padding: 9px 18px;
+  display: inline-block;
+}
+
+.middle, .middle2{
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.centered-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  color: white;
+}
+
+.h2 {
+  font-size: 35px !important;
+  position: relative;
+  top: 70px;
+}
+
+.marquee {
+  display: flex;
+  gap: 200px;
+  animation: marquee-scroll 13s linear infinite;
+  width: 170%;
+  overflow: hidden;
+  padding-bottom: 70px;
+  padding-top: 70px;
+  
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.marquee img {
+  max-width: 25%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.marquee .bossanova{
+  width: 105%;
+  height: 100px;
+  padding-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.marquee h1{
+  padding-top: 70px;
+  font-size: 100px;
+}
+
+.marquee h1 {
+  /* Add necessary styling for the h1 element */
+  color: white;
+  font-size: 24px;
+  /* Add other necessary styles */
+}
+
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.h2{
+  font-size: 35px !important;
+  position: relative;
+  top: 70px;
+}
+
+
+.middle2-tech{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-right: 250px;
+  margin-left: 350px;
+  font-size: 20px;
+  color: white !important;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+.p3{
+  line-height: 30px;
+  text-justify: distribute-all-lines;
+  font-style: italic;
+}
+
+.h3{
+  display: inline;
+  padding: 0;
+  margin: 0;
+  width: 424px;
+  color: #fff;
+  border-right: 3px solid #fff;
+  padding-right: 100px;
+  font-family: Red Hat Display, sans-serif;
+  font-weight: 500;
+  display: block;
+  font-size: 1.5em;
+  font-weight: 550 !important;
+  text-align: left;
+}
+
+.para-button{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.buttonlm{
+  color:#444444;
+  background-color: #95959519;
+  border: 2px solid #00c8ce;
+  border-radius: 10px;
+  margin-left: 0;
+  color: white;
+  font-family: Red Hat Display, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.buttonlm:hover{
+  color: #00c8ce;
+  background-color: #00c8ce;
+  border: 2px solid #00c8ce;
+  border-radius: 10px;
+  margin-left: 0;
+  color: rgb(0, 0, 0);
+  font-family: Red Hat Display, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.particle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: auto; /* Make the canvas cover the entire "middle2" section */
+  height: 100%;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-right: 20px;
+  margin-left: 20px; /* Reduce the margin for responsiveness */
+}
+
+
+.image-6 {
+  height: 80px;
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.profile {
+  background-color: #0e0e0e;
+  padding: 20px;
+  height: auto;
+  box-shadow: 0 0 15px #00fffb;
+  opacity: 1;
+  transition: opacity 0.5s, transform 0.5s, background-color 0.5s, box-shadow 0.5s;
+  transform: translateX(0); /* Initially no translation */
+  text-align: center;
+}
+
+
+.profile.in-view {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.profile:hover {
+  transform: translateX(0);
+  color: #0e0e0e;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 0 0 20px #8b8c8c;
+  transition: transform 0.5s, background-color 0.5s, box-shadow 0.5s;
+}
+
+.profile:nth-child(1) {
+  animation: slide-in-left 0.5s forwards;
+}
+
+.profile:nth-child(2) {
+  animation: slide-in-bottom 0.5s forwards;
+}
+
+.profile:nth-child(3) {
+  animation: slide-in-right 0.5s forwards;
+}
+
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slide-in-left 0.5s forwards;
+}
+
+.slide-bottom {
+  animation: slide-in-bottom 0.5s forwards;
+}
+
+.slide-right {
+  animation: slide-in-right 0.5s forwards;
+}
+
+
+.jd {
+  padding-top: 15px;
+  text-align: center;
+  align-items: center;
+  margin-left: 0; /* Remove left margin for responsiveness */
+}
+
+.name {
+  text-align: center; /* Center the text */
+}
+
+.quote {
+  font-size: 16px;
+  text-align: center; /* Center the text */
+}
+
+
+.hiring {
+  position: relative;
+  background: white; /* Define your gradient colors */
+  padding: 50px; /* Adjust the padding as needed */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.hire {
+  position: relative;
+  z-index: 1; /* Place the content above the background */
+  color: white; /* Text color */
+  gap: 25px;
+}
+
+/* Create a blob shape using pseudo-elements */
+.hiring::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(ellipse at top, transparent 60%, #00fffb 75%, #32f3fa 80%);
+  border-radius: 50% 100% 150% 50%;
+  top: 0;
+  left: -25%;
+  animation: blobAnimation 25s infinite linear; /* Add animation */
+
+}
+
+.hiring::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, transparent 60%, #00ffee 75%, #0bdee6 80%);
+  border-radius: 50% 50% 50% 50%;
+  bottom: 0;
+  right: -20%;
+  animation: blobAnimation 25s infinite linear; /* Add animation */
+
+}
+
+@keyframes blobAnimation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.button-5 {
+  background: linear-gradient(135deg, #3ec7e0, #f2ce56); /* Gradient colors for the button */
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background ease 0.3s;
+}
+
+.button-5:hover {
+  background: linear-gradient(135deg, #3ec7e0, #00b140); /* Change the gradient on hover */
+}
+
+.h4{
+  font-style: Red Hat Display, sans-serif;
+  padding-top: 20px;
+  font-size: 38px !important;
+  line-height: 2px !important;
+  color: #2b2b2b !important;
+}
+.p4{
+  font-style: Red Hat Display, sans-serif;
+  font-size: 22px;
+  color: #000;
+}
+
+.hiring a{
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  align-items: flex-start;
+  padding: 60px 160px 40px 160px;
+}
+
+.w-container{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-flex-container {
+  text-align: left;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.footer-logo-link {
+  max-height: 60px;
+  min-width: 40px;
+  flex: 0 auto;
+}
+
+.footer-image {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 0% 50%;
+  
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.div-block-7 {
+  margin-right: 40px;
+}
+
+.footer-heading {
+  width: auto;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: Red Hat Display, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.w-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-link {
+  color: #fff;
+  margin-bottom: 10px;
+  font-family: Red Hat Display, sans-serif;
+  text-decoration: none;
+  display: block;
+}
+
+.div-block-6 {
+  width: 110px;
+  margin-right: 60px;
+  padding-right: 0;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .middle2-tech {
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  
+  .h3 {
+    width: auto;
+    font-size: 1.5em;
+    padding-right: 20px;
+    text-align: center;
+    /* border-right: none; */
+  }
+
+  .marquee{
+    width: 310%;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr 1fr; /* Two columns for screens <= 1200px */
+  }
+
+  .home-profile {
+    height: auto;
+  }
+
+  .jd {
+    text-align: center;
+    align-items: center;
+  }
+
+  .name {
+    text-align: center;
+  }
+
+  .quote {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .w-container {
+    max-width: 728px;
+
+  }
+
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+}
+
+
